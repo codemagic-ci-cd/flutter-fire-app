@@ -1,0 +1,66 @@
+name: flutterfire_app
+description: "A new Flutter project."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  core:
+    path: ../core
+  dio: ^5.4.1
+  path_provider: ^2.1.2
+  path: ^1.9.0
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  flutter_markdown: ^0.6.21
+  url_launcher: ^6.2.5
+  cached_network_image: ^3.3.1
+  flutter_cache_manager: ^3.3.1
+  shimmer: ^3.0.0
+  shared_preferences: ^2.2.2
+  scroll_to_index: ^3.0.1
+  flex_color_scheme: ^7.3.1
+  sqlite3_flutter_libs: ^0.5.20
+  sqlite3: ^2.4.0
+  crypto: ^3.0.3
+  flutter_native_splash: ^2.4.0
+  mixpanel_flutter: ^2.2.0
+  envied: ^0.5.3
+  pub_semver: ^2.1.4
+  flutter_svg: 2.0.9
+  drift: 2.15.0
+  package_info_plus: 5.0.1
+  sentry_flutter: 7.18.0
+  firebase_core: 2.27.0
+  firebase_analytics: 10.8.9
+  firebase_crashlytics: 3.4.18
+  firebase_remote_config: 4.3.17
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  riverpod_generator: ^2.4.0
+  riverpod_lint: ^2.3.10
+  build_runner: ^2.4.8
+  drift_dev: 2.15.0
+  flutter_launcher_icons: ^0.13.1
+  envied_generator: 0.5.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/common/
+    - path: assets/dev/
+      flavors:
+        - dev
+    - path: assets/stg/
+      flavors:
+        - stg
+    - path: assets/prod/
+      flavors:
+        - prod
