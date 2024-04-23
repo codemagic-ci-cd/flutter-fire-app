@@ -3,9 +3,13 @@ workflows:
     name: Android Workflow
     instance_type: mac_mini_m1
     max_build_duration: 120
+    environment:
+      flutter: fvm
     working_directory: flutterfire_app
     scripts:
       - name: Get Flutter packages
         script: |
+          flutter --version
+          flutter doctor
           ls
           flutter packages pub get
