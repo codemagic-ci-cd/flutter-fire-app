@@ -7,6 +7,10 @@ workflows:
     scripts:
       - name: Get Flutter packages
         script: |
+          brew tap leoafarias/fvm
+          brew install fvm
           fvm install
+          fvm flutter --version
+          fvm use --force
           fvm flutter --version
           fvm flutter packages pub get
