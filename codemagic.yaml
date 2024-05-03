@@ -4,13 +4,14 @@ workflows:
     instance_type: mac_mini_m1
     max_build_duration: 120
     working_directory: flutterfire_app
+    environment:
+      flutter: stable
+      groups:
+        - ${{ github.ref == 'refs/heads/main' && 'Production' || 'Develop' }}
     scripts:
-      - name: Get Flutter packages
+      - name: check env vars
         script: |
-          brew tap leoafarias/fvm
-          brew install fvm
-          fvm install
-          fvm flutter --version
-          fvm use --force
-          fvm flutter --version
-          fvm flutter packages pub get
+          echo "Develop: $Develop"
+          echo $Develop
+          echo "Production: $Production"
+          echo $Production
